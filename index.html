@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trends Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <style>
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/8438923/pexels-photo-8438923.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-size: cover;
+            background-position: center;
+            margin-top: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+            color: #fff;
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 4rem 5%;
+            background: #fff;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 20px rgba(0,0,0,0.2);
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+        /* Animated Stats Section */
+        .stats-section {
+            padding: 4rem 5%;
+            background: #2c3e50;
+            color: #fff;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .stat-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Featured Posts with Hover Effects */
+        .featured-posts {
+            padding: 4rem 5%;
+        }
+
+        .post-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .post-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .post-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .post-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>AI Trends</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Latest in AI & Technology</h1>
+                <p>Stay updated with the newest trends and breakthroughs in artificial intelligence</p>
+                <a href="#featured-posts" class="cta-button">Explore Articles</a>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <h2>Featured Video</h2>
+            <div class="video-container">
+                <video controls poster="./pexels-cottonbro-6153354.jpg">
+                    <source src="5854603-uhd_4096_2160_24fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="1000">0</div>
+                    <p>Articles Published</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50000">0</div>
+                    <p>Monthly Readers</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">0</div>
+                    <p>Expert Contributors</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured-posts" class="featured-posts">
+            <h2>Featured Articles</h2>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202504/deep_learning_img_istock.jpg?itok=Hyr0-iQZ" alt="AI Article">
+                    <div class="post-content">
+                        <h3>Designing a new way to optimize complex coordinated systems</h3>
+                        <p>Using diagrams to represent interactions in multipart systems can provide a faster way to design software improvements...</p>
+                        <a href="https://news.mit.edu/2025/designing-new-way-optimize-complex-coordinated-systems-0424" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202504/MIT-CausVid.png?itok=BcFAq2tm" alt="AI Article">
+                    <div class="post-content">
+                        <h3>Hybrid AI model crafts smooth, high-quality videos in seconds</h3>
+                        <p>The CausVid generative AI tool uses a diffusion model to teach an autoregressive (frame-by-frame) system to rapidly produce stable, high-resolution videos...</p>
+                        <a href="https://news.mit.edu/2025/causevid-hybrid-ai-model-crafts-smooth-high-quality-videos-in-seconds-0506" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202505/Analytics-Edge-in-Healthcare-Dimitris-Bertsimas-00_0.png?itok=sUS64_d3" alt="AI Article">
+                    <div class="post-content">
+                        <h3>Q&A: A roadmap for revolutionizing health care through data-driven innovation</h3>
+                        <p>A new book coauthored by MIT’s Dimitris Bertsimas explores how analytics is driving decisions and outcomes in health care...</p>
+                        <a href="https://news.mit.edu/2025/qa-roadmap-revolutionizing-health-care-through-data-driven-innovation-0505" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest AI news and updates delivered to your inbox</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your trusted source for AI news and technology trends.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AI Trends Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // GSAP Animations
+        gsap.from('.hero-content', {
+            duration: 1,
+            y: 100,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            // Any resize handling if needed
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - AI Trends Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .articles-container {
+            padding: 120px 5% 4rem;
+        }
+        
+        .articles-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .article-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .article-meta {
+            padding: 1rem;
+            background: #f8f9fa;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .categories {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .category-tag {
+            padding: 0.5rem 1rem;
+            background: #3498db;
+            color: #fff;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .category-tag:hover {
+            background: #2980b9;
+        }
+        
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>AI Trends</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="articles-container">
+        <div class="articles-header">
+            <h1>Latest Articles</h1>
+            <p>Explore our collection of AI and technology articles</p>
+        </div>
+
+        <section class="categories">
+            <h2>Categories</h2>
+            <div class="category-tags">
+                <a href="#" class="category-tag">Machine Learning</a>
+                <a href="#" class="category-tag">Deep Learning</a>
+                <a href="#" class="category-tag">AI Ethics</a>
+                <a href="#" class="category-tag">Neural Networks</a>
+                <a href="#" class="category-tag">Computer Vision</a>
+                <a href="#" class="category-tag">Natural Language Processing</a>
+            </div>
+        </section>
+
+        <div class="articles-grid">
+            <article class="article-card">
+                <img src="https://images.indianexpress.com/2025/03/OpenAI.jpg?w=640" alt="AI Article">
+                <div class="post-content">
+                    <h3>OpenAI plans to cut Microsoft revenue share after restructuring</h3>
+                    <p> OpenAI has told investors it will share a smaller fraction of revenue with major backer Microsoft as it moves ahead with its restructuring, The Information reported on Tuesday...</p>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> May 7, 2025</span>
+                        <span><i class="far fa-folder"></i> AI & Technology</span>
+                    </div>
+                    <a href="https://indianexpress.com/article/technology/artificial-intelligence/openai-plans-to-cut-microsoft-revenue-share-after-restructuring-9987174/" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://www.brookings.edu/wp-content/uploads/2018/04/robotics.jpg?resize=1500,998" alt="AI Article">
+                <div class="post-content">
+                    <h3>How artificial intelligence is transforming the world</h3>
+                    <p>Most people are not very familiar with the concept of artificial intelligence (AI). As an illustration, when 1,500 senior business leaders in the United States in 2017 were asked about AI, only 17 percent said they were familiar with it.....</p>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> April 24, 2025</span>
+                        <span><i class="far fa-folder"></i> Research </span>
+                    </div>
+                    <a href="https://www.brookings.edu/articles/how-artificial-intelligence-is-transforming-the-world/" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/647994d97ff0e466a60e1090/The-15-Biggest-Risks-Of-Artificial-Intelligence/960x0.jpg?height=473&width=711&fit=bounds" alt="AI Article">
+                <div class="post-content">
+                    <h3>AI—The good, the bad, and the scary</h3>
+                    <p>There is no denying that Artificial Intelligence has changed our lives. However, some might argue if it’s for the better....</p>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> March 13, 2025</span>
+                        <span><i class="far fa-folder"></i> Ethics</span>
+                    </div>
+                    <a href="https://eng.vt.edu/magazine/stories/fall-2023/ai.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202504/mit-mcgovern-madonna-fmri-600x900_0.jpg?itok=sBO5ugI2" alt="AI Article">
+                <div class="post-content">
+                    <h3>MIT’s McGovern Institute is shaping brain science and improving human lives on a global scale</h3>
+                    <p>A quarter century after its founding, the McGovern Institute reflects on its discoveries in the areas of neuroscience, neurotechnology, artificial intelligence, brain-body connections, and therapeutics....</p>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> April 18, 2025</span>
+                        <span><i class="far fa-folder"></i> Neural Networks</span>
+                    </div>
+                    <a href="https://news.mit.edu/2025/mit-mcgovern-institute-shaping-brain-science-improving-human-lives-0418" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202504/MIT-TactStyle-00.png?itok=xlpYew-2" alt="AI Article">
+                <div class="post-content">
+                    <h3>3D modeling you can feel</h3>
+                    <p>TactStyle, a system developed by CSAIL researchers, uses image prompts to replicate both the visual appearance and tactile properties of 3D models....</p>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> April 22, 2025</span>
+                        <span><i class="far fa-folder"></i> 3D Modeling</span>
+                    </div>
+                    <a href="https://news.mit.edu/2025/3d-modeling-you-can-feel-0422" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=635,q=80/https://builtin.com/sites/www.builtin.com/files/2022-07/future-artificial-intelligence.png" alt="AI Article">
+                <div class="post-content">
+                    <h3>The Future of AI: How Artificial Intelligence Will Change the World</h3>
+                    <p>AI is constantly changing our world. Here are just a few ways AI will influence our lives....</p>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> Jan 28, 2025</span>
+                        <span><i class="far fa-folder"></i> Future of AI</span>
+                    </div>
+                    <a href="https://builtin.com/artificial-intelligence/artificial-intelligence-future" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202504/mit-lincoln-lab-us-air-mobility-00_0.jpg?itok=uokv6Zdn" alt="AI Article">
+                <div class="post-content">
+                    <h3>Artificial intelligence enhances air mobility planning</h3>
+                    <p>Lincoln Laboratory is transitioning tools to the 618th Air Operations Center to streamline global transport logistics....</p>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> April 25, 2025</span>
+                        <span><i class="far fa-folder"></i> Business</span>
+                    </div>
+                    <a href="https://news.mit.edu/2025/artificial-intelligence-enhances-air-mobility-planning-0425" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your trusted source for AI news and technology trends.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AI Trends Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
